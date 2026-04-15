@@ -27,8 +27,8 @@ export const AnalysisForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const portalId = import.meta.env.VITE_HUBSPOT_PORTAL_ID;
-    const formId = import.meta.env.VITE_HUBSPOT_FORM_ID;
+    const portalId = import.meta.env.VITE_HUBSPOT_PORTAL_ID || '49273600';
+    const formId = import.meta.env.VITE_HUBSPOT_FORM_ID || 'dba7d326-5fd5-4139-9c14-69bb052ab4cd';
 
     if (!portalId || !formId) {
       console.error('HubSpot IDs missing in environment variables');
