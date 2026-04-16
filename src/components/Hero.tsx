@@ -102,7 +102,7 @@ export const Hero = () => {
         >
           <a 
             href="#analyse" 
-            className="group relative inline-flex items-center gap-3 bg-brand-accent text-brand-bg font-instrument text-base md:text-lg font-bold px-10 py-5 no-underline transition-all hover:bg-brand-accent-hover hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(243,177,124,0.3)] active:translate-y-0"
+            className="group relative inline-flex items-center gap-3 bg-brand-button text-white font-instrument text-base md:text-lg font-bold px-10 py-5 no-underline transition-all hover:bg-brand-button-hover hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(125,63,46,0.4)] active:translate-y-0"
           >
             Analyse jetzt anfordern
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -206,7 +206,7 @@ export const Hero = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
-          className="absolute z-20 bg-brand-bg-card/90 backdrop-blur-md border border-brand-accent/20 p-5 top-[20%] left-[10%] shadow-2xl"
+          className="absolute z-20 bg-brand-bg-card/90 backdrop-blur-md border border-brand-accent/20 p-4 md:p-5 top-[5%] left-[2%] md:top-[20%] md:left-[10%] shadow-2xl"
         >
           <div className="font-syne text-3xl font-extrabold text-brand-accent leading-none mb-1 tracking-tighter">26K+</div>
           <div className="text-[10px] text-brand-grey font-bold uppercase tracking-widest">YouTube Subs</div>

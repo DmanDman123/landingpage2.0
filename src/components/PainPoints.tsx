@@ -85,10 +85,10 @@ export const PainPoints = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
-          className="mt-16 flex items-center justify-center gap-4 text-brand-accent/60 font-bold uppercase tracking-[0.2em] text-[10px]"
+          className="mt-16 md:mt-24 flex items-center justify-center gap-4 text-brand-accent font-bold uppercase tracking-widest text-[13px] md:text-sm text-center px-6"
         >
-          <AlertCircle className="w-4 h-4" />
-          Kommt dir das bekannt vor? Dann wird es Zeit für einen Wechsel.
+          <AlertCircle className="w-5 h-5 shrink-0" />
+          <span>Kommt dir das bekannt vor? <span className="text-white">Dann wird es Zeit für einen Wechsel.</span></span>
         </motion.div>
       </div>
     </section>

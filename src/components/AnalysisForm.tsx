@@ -97,7 +97,7 @@ export const AnalysisForm = () => {
           <em className="not-italic text-brand-accent">Konto-Analyse.</em>
         </h2>
         <p className="text-base font-normal text-brand-grey leading-relaxed mb-12">
-          Für E-Commerce Shops ab <span className="text-brand-accent font-semibold">5.000 € monatlichem Google Ads Budget</span>. Du erhältst ein persönliches Video-Audit in 48 Stunden — kostenlos und ohne Verkaufsdruck.
+          Für E-Commerce Shops ab <span className="text-brand-accent font-semibold">5.000 € monatlichem Google Ads Budget</span>. Du erhältst ein persönliches Video-Audit in 48 Stunden.
         </p>
         
         <div className="bg-brand-bg-card border border-brand-border p-8 md:p-13 text-left relative overflow-hidden">
@@ -113,7 +113,7 @@ export const AnalysisForm = () => {
           <form onSubmit={handleSubmit} className="flex flex-col gap-3.5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
               <div className="flex flex-col gap-1.5">
-                <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">Vorname</label>
+                <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">Vorname *</label>
                 <input 
                   required
                   type="text" 
@@ -125,7 +125,7 @@ export const AnalysisForm = () => {
                 />
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">Nachname</label>
+                <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">Nachname *</label>
                 <input 
                   required
                   type="text" 
@@ -139,9 +139,8 @@ export const AnalysisForm = () => {
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">Firma / Shop-Name</label>
+              <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">Firma / Shop-Name (Optional)</label>
               <input 
-                required
                 type="text" 
                 name="company"
                 value={formData.company}
@@ -153,7 +152,7 @@ export const AnalysisForm = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
               <div className="flex flex-col gap-1.5">
-                <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">E-Mail Adresse</label>
+                <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">E-Mail Adresse *</label>
                 <input 
                   required
                   type="email" 
@@ -165,9 +164,8 @@ export const AnalysisForm = () => {
                 />
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">Telefonnummer</label>
+                <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">Telefonnummer (Optional)</label>
                 <input 
-                  required
                   type="tel" 
                   name="phone"
                   value={formData.phone}
@@ -179,9 +177,8 @@ export const AnalysisForm = () => {
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">Google Ads Konto ID (10-stellig)</label>
+              <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">Google Ads Konto ID (Optional)</label>
               <input 
-                required
                 type="text" 
                 name="google_ads_id"
                 value={formData.google_ads_id}
@@ -189,11 +186,11 @@ export const AnalysisForm = () => {
                 placeholder="123-456-7890" 
                 className="bg-white/4 border border-brand-border text-white font-instrument text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
               />
-              <p className="text-[10px] text-brand-grey/60 mt-0.5 italic">Wird benötigt, um lesenden Zugriff für das Audit anzufragen.</p>
+              <p className="text-[10px] text-brand-grey/60 mt-0.5 italic">Für ein Audit benötigen wir später lesenden Zugriff.</p>
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">Monatliches Google Ads Budget</label>
+              <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">Monatliches Google Ads Budget *</label>
               <select 
                 required
                 name="budget"
@@ -209,7 +206,7 @@ export const AnalysisForm = () => {
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">URL deines Online Shops</label>
+              <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">URL deines Online Shops *</label>
               <input 
                 required
                 type="url" 
@@ -236,7 +233,7 @@ export const AnalysisForm = () => {
             <button 
               type="submit" 
               disabled={isSubmitting}
-              className="w-full bg-brand-accent text-brand-bg font-instrument text-base font-bold px-8 py-5 border-none cursor-pointer mt-2.5 transition-all hover:bg-brand-accent-hover hover:-translate-y-0.5 hover:shadow-[0_12px_36px_rgba(243,177,124,0.22)] active:translate-y-0 flex items-center justify-center gap-2 tracking-wide disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full bg-brand-button text-white font-instrument text-base font-bold px-8 py-5 border-none cursor-pointer mt-2.5 transition-all hover:bg-brand-button-hover hover:-translate-y-0.5 hover:shadow-[0_12px_36px_rgba(125,63,46,0.3)] active:translate-y-0 flex items-center justify-center gap-2 tracking-wide disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <>

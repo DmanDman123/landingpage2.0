@@ -43,6 +43,8 @@ export default function App() {
         <FAQ />
         <AnalysisForm />
       </main>
+
+      <Footer />
     </div>
   );
 }
