@@ -123,7 +123,7 @@ export const Reviews = () => {
           </div>
           <a 
             href="#analyse" 
-            className="inline-flex items-center gap-2 bg-brand-button text-white font-instrument text-sm md:text-base font-bold px-8 py-4 no-underline transition-all hover:bg-brand-button-hover hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(125,63,46,0.3)] active:translate-y-0"
+            className="inline-flex items-center gap-2 bg-brand-button text-brand-bg font-instrument text-sm md:text-base font-bold px-8 py-4 no-underline transition-all hover:bg-brand-button-hover hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(255,174,114,0.3)] active:translate-y-0"
           >
             Jetzt Analyse anfragen
             <ArrowRight className="w-4 h-4" />

@@ -6,19 +6,19 @@
   --font-syne: "Syne", sans-serif;
   --font-instrument: "Instrument Sans", sans-serif;
 
-  --color-brand-bg: rgb(16, 10, 52);
-  --color-brand-bg-mid: rgb(24, 16, 72);
-  --color-brand-bg-card: rgb(30, 22, 88);
-  --color-brand-bg-card-2: rgb(36, 26, 98);
-  --color-brand-accent: rgb(243, 177, 124);
-  --color-brand-accent-dim: rgba(243, 177, 124, 0.12);
-  --color-brand-accent-hover: rgb(230, 155, 95);
-  --color-brand-accent-soft: rgba(243, 177, 124, 0.6);
-  --color-brand-button: rgb(234, 71, 55);
-  --color-brand-button-hover: rgb(214, 51, 35);
+  --color-brand-bg: rgb(14, 3, 41);
+  --color-brand-bg-mid: rgb(24, 14, 71);
+  --color-brand-bg-card: rgb(34, 19, 88);
+  --color-brand-bg-card-2: rgb(44, 25, 105);
+  --color-brand-accent: rgb(255, 174, 114);
+  --color-brand-accent-dim: rgba(255, 174, 114, 0.12);
+  --color-brand-accent-hover: rgb(242, 152, 94);
+  --color-brand-accent-soft: rgba(255, 174, 114, 0.6);
+  --color-brand-button: rgb(255, 174, 114);
+  --color-brand-button-hover: rgb(242, 152, 94);
   --color-brand-grey: rgba(255, 255, 255, 0.55);
-  --color-brand-border: rgba(243, 177, 124, 0.13);
-  --color-brand-border-strong: rgba(243, 177, 124, 0.3);
+  --color-brand-border: rgba(255, 174, 114, 0.13);
+  --color-brand-border-strong: rgba(255, 174, 114, 0.3);
 }
 
 @layer base {

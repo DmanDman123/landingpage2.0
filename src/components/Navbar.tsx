@@ -17,7 +17,7 @@ export const Navbar = () => {
         </a>
         <a 
           href="#analyse" 
-          className="bg-brand-button text-white font-instrument text-xs md:text-sm font-semibold tracking-wider px-4 md:px-6 py-2.5 no-underline transition-all hover:bg-brand-button-hover hover:-translate-y-0.5 active:translate-y-0"
+          className="bg-brand-button text-brand-bg font-instrument text-xs md:text-sm font-semibold tracking-wider px-4 md:px-6 py-2.5 no-underline transition-all hover:bg-brand-button-hover hover:-translate-y-0.5 active:translate-y-0"
         >
           Jetzt Analyse anfragen
         </a>

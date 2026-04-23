@@ -26,10 +26,9 @@ export default function App() {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(243,177,124,0.05),transparent)] animate-[shimmer_3s_infinite]" />
         <p className="relative z-10 text-[11px] md:text-xs font-bold tracking-[0.05em] text-brand-accent uppercase">
           <span className="inline-block w-2 h-2 bg-brand-accent rounded-full animate-pulse mr-2" />
-          Nur noch <span className="underline decoration-2 underline-offset-4">3 Analyse-Plätze</span> frei — sichere dir jetzt dein kostenloses Audit ↓
+          <span className="underline decoration-2 underline-offset-4">Sichere dir jetzt</span> dein kostenloses Audit ↓
         </p>
       </motion.div>
-
       <Navbar />
       
       <main>

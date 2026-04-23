@@ -11,7 +11,7 @@ const steps = [
   {
     num: '02',
     title: 'Konto-Zugang teilen',
-    text: 'Wir melden uns und erklären, wie du uns sicher lesenden Zugang zu deinem Google Ads Konto gibst.',
+    text: 'Wir melden uns und erklären, wie du uns sicher temporären Zugang zu deinem Google Ads Konto gibst.',
     time: '~5 Min.'
   },
   {

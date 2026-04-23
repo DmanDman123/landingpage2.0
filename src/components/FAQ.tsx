@@ -9,7 +9,7 @@ const faqs = [
   { q: "Wie lange dauert es, bis ich das Ergebnis bekomme?", a: "In der Regel innerhalb von 48 Stunden nach Eingang deiner Anfrage. Du erhältst ein persönliches Analyse-Video plus schriftliche Optimierungsempfehlungen — individuell auf dein Konto zugeschnitten." },
   { q: "Was unterscheidet euch von anderen Agenturen?", a: "Wir sind eine Boutique-Agentur: Weniger Kunden, damit jeder einen festen Ansprechpartner hat, der das Konto wirklich kennt. Dazu kommen über 10 Jahre Erfahrung und der größte rein auf Google Ads fokussierte YouTube-Kanal im DACH-Raum." },
   { q: "Wie läuft eine laufende Zusammenarbeit ab?", a: "Du bekommst einen persönlichen SEA Manager, regelmäßige Jour-Fixe Termine, transparente Reportings und kontinuierliche Optimierung. Keine Massenabfertigung — echte, proaktive Betreuung." },
-  { q: "Gibt es Mindestlaufzeiten oder lange Vertragsbindungen?", a: "Nein. Wir setzen auf faire Vertragsbedingungen ohne lange Bindungen. Unsere Kunden bleiben, weil die Ergebnisse stimmen — nicht wegen Klauseln." },
+  { q: "Gibt es Mindestlaufzeiten oder lange Vertragsbindungen?", a: "Ja, wir haben eine überschaubare Mindestlaufzeit. Der Grund dafür ist simpel: Strategische Optimierungen und der Google-Algorithmus brauchen einfach etwas Zeit, um nachhaltig ihre volle Wirkung zu entfalten. Wir möchten echte Erfolge für dich generieren, statt nur kurzfristige Pflaster zu kleben. Ansonsten sind unsere Bedingungen absolut fair und flexibel." },
 ];
 
 export const FAQ = () => {

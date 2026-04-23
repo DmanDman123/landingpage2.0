@@ -226,14 +226,14 @@ export const AnalysisForm = () => {
                 onChange={handleChange}
                 placeholder="Gibt es etwas Besonderes, auf das wir achten sollen?" 
                 rows={3}
-                className="bg-white/4 border border-brand-border text-white font-instrument text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3 resize-none"
+                className="bg-white/4 border border-brand-border text-white font-instrument text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3 resize-y min-h-[100px] max-h-[300px]"
               />
             </div>
 
             <button 
               type="submit" 
               disabled={isSubmitting}
-              className="w-full bg-brand-button text-white font-instrument text-base font-bold px-8 py-5 border-none cursor-pointer mt-2.5 transition-all hover:bg-brand-button-hover hover:-translate-y-0.5 hover:shadow-[0_12px_36px_rgba(125,63,46,0.3)] active:translate-y-0 flex items-center justify-center gap-2 tracking-wide disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full bg-brand-button text-brand-bg font-instrument text-base font-bold px-8 py-5 border-none cursor-pointer mt-2.5 transition-all hover:bg-brand-button-hover hover:-translate-y-0.5 hover:shadow-[0_12px_36px_rgba(255,174,114,0.3)] active:translate-y-0 flex items-center justify-center gap-2 tracking-wide disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <>

@@ -33,18 +33,7 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(243,177,124,0.05)_0%,transparent_50%)] pointer-events-none" />
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(var(--color-brand-accent) 0.5px, transparent 0.5px)', backgroundSize: '24px 24px' }} />
 
-      <div className="flex flex-col justify-center px-6 md:px-12 lg:pl-20 lg:pr-12 py-20 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="mb-4"
-        >
-          <span className="inline-block px-3 py-1 bg-brand-accent/10 border border-brand-accent/20 text-brand-accent text-[11px] font-bold uppercase tracking-wider">
-            Exklusives Angebot
-          </span>
-        </motion.div>
-
+      <div className="flex flex-col justify-start pt-12 md:pt-16 lg:pt-20 px-6 md:px-12 lg:pl-20 lg:pr-12 pb-16 lg:pb-20 relative z-10">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -82,7 +71,7 @@ export const Hero = () => {
           {[
             'Persönliches Video-Audit',
             'E-Commerce Fokus',
-            'Ab 5.000 € Budget',
+            'Ab 5.000 € Werbebudget',
             'Keine Verpflichtung'
           ].map((benefit, i) => (
             <div key={i} className="flex items-center gap-3 text-sm font-semibold text-white/90">
@@ -102,7 +91,7 @@ export const Hero = () => {
         >
           <a 
             href="#analyse" 
-            className="group relative inline-flex items-center gap-3 bg-brand-button text-white font-instrument text-base md:text-lg font-bold px-10 py-5 no-underline transition-all hover:bg-brand-button-hover hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(125,63,46,0.4)] active:translate-y-0"
+            className="group relative inline-flex items-center gap-3 bg-brand-button text-brand-bg font-instrument text-base md:text-lg font-bold px-10 py-5 no-underline transition-all hover:bg-brand-button-hover hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(255,174,114,0.4)] active:translate-y-0"
           >
             Analyse jetzt anfordern
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
