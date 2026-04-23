@@ -4,6 +4,8 @@ import { toast } from 'sonner';
 
 export const AnalysisForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  // Honeypot field - normal users won't see or interact with it
+  const [honeypot, setHoneypot] = useState('');
   const [formData, setFormData] = useState({
     firstname: '',
     lastname: '',
@@ -25,6 +27,15 @@ export const AnalysisForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Honeypot check: If the hidden field is filled, it's a bot.
+    // We silently return and pretend it was successful so the bot doesn't try harder.
+    if (honeypot) {
+      console.log('Bot detected via honeypot. Blocked submission.');
+      toast.success('Anfrage erfolgreich gesendet!'); // Fake success
+      return;
+    }
+
     setIsSubmitting(true);
 
     const portalId = import.meta.env.VITE_HUBSPOT_PORTAL_ID || '49273600';
@@ -111,6 +122,18 @@ export const AnalysisForm = () => {
           </div>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-3.5">
+            {/* Honeypot field: Hidden from users, filled by bots */}
+            <div style={{ display: 'none' }} aria-hidden="true">
+              <input
+                type="text"
+                name="website_url_check"
+                tabIndex={-1}
+                autoComplete="off"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+              />
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
               <div className="flex flex-col gap-1.5">
                 <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">Vorname *</label>
