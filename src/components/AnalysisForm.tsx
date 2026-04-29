@@ -79,6 +79,13 @@ export const AnalysisForm = () => {
 
       if (response.ok) {
         toast.success('Anfrage erfolgreich gesendet! Wir melden uns in Kürze.');
+        // Meta Pixel Lead Event
+        if (typeof (window as any).fbq === 'function') {
+          (window as any).fbq('track', 'Lead', {
+            value: 0.00,
+            currency: 'EUR'
+          });
+        }
         setFormData({
           firstname: '',
           lastname: '',
