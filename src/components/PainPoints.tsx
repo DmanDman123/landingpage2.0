@@ -32,7 +32,7 @@ export const PainPoints = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-syne text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] tracking-tight text-white mb-6"
+            className="font-sans text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] tracking-tight text-white mb-6"
           >
             Warum die meisten Agenturen<br />
             <em className="not-italic text-brand-accent">ihr Versprechen nicht halten.</em>
@@ -63,7 +63,7 @@ export const PainPoints = () => {
                 {point.icon}
               </div>
 
-              <h3 className="font-syne text-xl font-bold mb-4 text-white tracking-tight group-hover:text-brand-accent transition-colors">
+              <h3 className="font-sans text-xl font-bold mb-4 text-white tracking-tight group-hover:text-brand-accent transition-colors">
                 {point.title}
               </h3>
               <p className="text-base font-normal leading-relaxed text-brand-grey group-hover:text-white/80 transition-colors">

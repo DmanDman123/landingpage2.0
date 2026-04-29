@@ -72,7 +72,7 @@ export const WhyUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-syne text-4xl md:text-5xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight text-white mb-8"
+            className="font-sans text-4xl md:text-5xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight text-white mb-8"
           >
             Boutique heißt:<br />
             Dein Konto.<br />
@@ -111,7 +111,7 @@ export const WhyUs = () => {
                     </div>
                   </div>
                   <div className="relative z-10">
-                    <div className="font-syne text-4xl md:text-5xl font-extrabold text-brand-accent mb-3 tracking-tighter">
+                    <div className="font-sans text-4xl md:text-5xl font-extrabold text-brand-accent mb-3 tracking-tighter">
                       {stat.num}
                     </div>
                     <div className="text-[11px] font-bold text-brand-grey uppercase tracking-[0.15em] leading-tight max-w-[140px]">
@@ -152,7 +152,7 @@ export const WhyUs = () => {
                 <div className="w-12 h-12 bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center mb-8 group-hover:bg-brand-accent group-hover:text-brand-bg transition-all duration-500">
                   {feature.icon}
                 </div>
-                <h3 className="font-syne text-xl font-bold text-white mb-4 tracking-tight">
+                <h3 className="font-sans text-xl font-bold text-white mb-4 tracking-tight">
                   {feature.title}
                 </h3>
                 <p className="text-sm font-normal leading-relaxed text-brand-grey group-hover:text-white/90 transition-colors flex-grow">

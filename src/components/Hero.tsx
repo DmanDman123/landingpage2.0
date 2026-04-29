@@ -38,7 +38,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight text-white mb-6 font-syne"
+          className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight text-white mb-6 font-sans"
         >
           Dein Google Ads Konto<br />
           <em className="not-italic text-brand-accent">verliert Geld.</em>
@@ -91,7 +91,7 @@ export const Hero = () => {
         >
           <a 
             href="#analyse" 
-            className="group relative inline-flex items-center gap-3 bg-brand-button text-brand-bg font-instrument text-base md:text-lg font-bold px-10 py-5 no-underline transition-all hover:bg-brand-button-hover hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(255,174,114,0.4)] active:translate-y-0"
+            className="group relative inline-flex items-center gap-3 bg-brand-button text-brand-bg font-sans text-base md:text-lg font-bold px-10 py-5 no-underline transition-all hover:bg-brand-button-hover hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(255,174,114,0.4)] active:translate-y-0"
           >
             Analyse jetzt anfordern
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -182,7 +182,7 @@ export const Hero = () => {
                   <Play className="w-8 h-8 text-brand-bg fill-brand-bg ml-1.5" />
                 </motion.div>
                 <div className="absolute bottom-12 left-0 right-0 text-center">
-                  <div className="text-white font-syne text-sm font-bold tracking-widest uppercase">Video abspielen</div>
+                  <div className="text-white font-sans text-sm font-bold tracking-widest uppercase">Video abspielen</div>
                 </div>
               </div>
             )}
@@ -197,7 +197,7 @@ export const Hero = () => {
           transition={{ delay: 0.6 }}
           className="absolute z-20 bg-brand-bg-card/90 backdrop-blur-md border border-brand-accent/20 p-4 md:p-5 top-[5%] left-[2%] md:top-[20%] md:left-[10%] shadow-2xl"
         >
-          <div className="font-syne text-3xl font-extrabold text-brand-accent leading-none mb-1 tracking-tighter">26K+</div>
+          <div className="font-sans text-3xl font-extrabold text-brand-accent leading-none mb-1 tracking-tighter">26K+</div>
           <div className="text-[10px] text-brand-grey font-bold uppercase tracking-widest">YouTube Subs</div>
         </motion.div>
 
@@ -208,7 +208,7 @@ export const Hero = () => {
           transition={{ delay: 0.8 }}
           className="absolute z-20 bg-brand-bg-card/90 backdrop-blur-md border border-brand-accent/20 p-4 md:p-5 bottom-[14%] right-[2%] md:bottom-[22%] md:right-[10%] shadow-2xl"
         >
-          <div className="font-syne text-3xl font-extrabold text-brand-accent leading-none mb-1 tracking-tighter">4.9★</div>
+          <div className="font-sans text-3xl font-extrabold text-brand-accent leading-none mb-1 tracking-tighter">4.9★</div>
           <div className="text-[10px] text-brand-grey font-bold uppercase tracking-widest">Top Rating</div>
         </motion.div>
 

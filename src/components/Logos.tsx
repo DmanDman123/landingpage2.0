@@ -16,7 +16,7 @@ export const Logos = () => {
           {[...logos, ...logos].map((logo, i) => (
             <span 
               key={i} 
-              className="font-syne text-xl md:text-2xl font-bold tracking-widest text-white/10 uppercase whitespace-nowrap transition-colors cursor-default hover:text-brand-accent/40"
+              className="font-sans text-xl md:text-2xl font-bold tracking-widest text-white/10 uppercase whitespace-nowrap transition-colors cursor-default hover:text-brand-accent/40"
             >
               {logo}
             </span>

@@ -32,14 +32,14 @@ export const Reviews = () => {
       <div className="max-w-[1140px] mx-auto">
         <div className="flex items-end justify-between mb-14 gap-6 flex-wrap">
           <div>
-            <h2 className="font-syne text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-[1.08] tracking-tight text-white mb-0">
+            <h2 className="font-sans text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-[1.08] tracking-tight text-white mb-0">
               Echte Ergebnisse.<br />
               <em className="not-italic text-brand-accent">Echte Stimmen.</em>
             </h2>
           </div>
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-4.5">
-              <div className="font-syne text-6xl font-extrabold leading-none text-brand-accent tracking-tighter">4.9</div>
+              <div className="font-sans text-6xl font-extrabold leading-none text-brand-accent tracking-tighter">4.9</div>
               <div className="flex flex-col gap-1.5">
                 <div className="text-brand-accent text-lg tracking-[3px]">★★★★★</div>
                 <div className="flex items-center gap-2">
@@ -64,18 +64,18 @@ export const Reviews = () => {
               transition={{ delay: i * 0.1 }}
               className="bg-brand-bg p-8.5 relative overflow-hidden transition-colors hover:bg-brand-bg-card group flex flex-col"
             >
-              <div className="absolute top-2.5 right-5 font-syne text-8xl font-extrabold text-brand-accent/4 leading-none pointer-events-none group-hover:text-brand-accent/8 transition-colors">"</div>
+              <div className="absolute top-2.5 right-5 font-sans text-8xl font-extrabold text-brand-accent/4 leading-none pointer-events-none group-hover:text-brand-accent/8 transition-colors">"</div>
               <div className="text-brand-accent text-xs tracking-[3px] mb-4">{review.stars}</div>
               <p className="text-sm font-normal leading-relaxed text-white/65 mb-5.5 italic flex-1">
                 {review.text}
               </p>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-7.5 h-7.5 rounded-full bg-brand-accent-dim border border-brand-border-strong flex items-center justify-center font-syne text-[10px] font-extrabold text-brand-accent shrink-0">
+                  <div className="w-7.5 h-7.5 rounded-full bg-brand-accent-dim border border-brand-border-strong flex items-center justify-center font-sans text-[10px] font-extrabold text-brand-accent shrink-0">
                     {review.initials}
                   </div>
                   <div>
-                    <div className="font-syne text-xs font-bold text-brand-accent-soft tracking-wider">{review.author}</div>
+                    <div className="font-sans text-xs font-bold text-brand-accent-soft tracking-wider">{review.author}</div>
                     <div className="text-[11px] text-brand-grey font-normal">{review.role}</div>
                   </div>
                 </div>
@@ -116,14 +116,14 @@ export const Reviews = () => {
           className="bg-brand-bg-card border border-brand-border p-10 md:px-12 flex items-center justify-between gap-8 flex-wrap mt-0.5"
         >
           <div>
-            <div className="font-syne text-xl font-bold text-white tracking-tight">
+            <div className="font-sans text-xl font-bold text-white tracking-tight">
               Bereit für <span className="text-brand-accent">echte Ergebnisse</span>?
             </div>
             <div className="text-sm text-brand-grey mt-1">Kostenlose Konto-Analyse — persönlich, in 48 Stunden.</div>
           </div>
           <a 
             href="#analyse" 
-            className="inline-flex items-center gap-2 bg-brand-button text-brand-bg font-instrument text-sm md:text-base font-bold px-8 py-4 no-underline transition-all hover:bg-brand-button-hover hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(255,174,114,0.3)] active:translate-y-0"
+            className="inline-flex items-center gap-2 bg-brand-button text-brand-bg font-sans text-sm md:text-base font-bold px-8 py-4 no-underline transition-all hover:bg-brand-button-hover hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(255,174,114,0.3)] active:translate-y-0"
           >
             Jetzt Analyse anfragen
             <ArrowRight className="w-4 h-4" />

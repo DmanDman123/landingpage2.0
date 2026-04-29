@@ -38,7 +38,7 @@ export const Team = () => {
   return (
     <section className="px-6 md:px-12 py-32 border-t border-brand-border">
       <div className="max-w-[1440px] mx-auto">
-        <h2 className="font-syne text-3xl md:text-5xl lg:text-[56px] font-extrabold leading-[1.05] tracking-tight text-white mb-20">
+        <h2 className="font-sans text-3xl md:text-5xl lg:text-[56px] font-extrabold leading-[1.05] tracking-tight text-white mb-20">
           Die Experten hinter<br />
           <em className="not-italic text-brand-accent">deinem Konto.</em>
         </h2>
@@ -66,13 +66,13 @@ export const Team = () => {
                     (e.target as HTMLImageElement).nextElementSibling?.classList.add('flex');
                   }}
                 />
-                <div className="hidden absolute inset-0 bg-brand-bg-card items-center justify-center font-syne text-4xl font-extrabold text-brand-accent">
+                <div className="hidden absolute inset-0 bg-brand-bg-card items-center justify-center font-sans text-4xl font-extrabold text-brand-accent">
                   {member.initials}
                 </div>
               </div>
 
               <div className="relative z-10">
-                <div className="font-syne text-lg md:text-xl font-bold text-white mb-2 tracking-tight group-hover:text-brand-accent transition-colors duration-300">
+                <div className="font-sans text-lg md:text-xl font-bold text-white mb-2 tracking-tight group-hover:text-brand-accent transition-colors duration-300">
                   {member.name}
                 </div>
                 <div className="text-[13px] text-brand-grey font-normal leading-relaxed">

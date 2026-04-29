@@ -32,7 +32,7 @@ export const Process = () => {
   return (
     <section className="bg-brand-bg-mid border-t border-brand-border px-6 md:px-12 py-32">
       <div className="max-w-[1140px] mx-auto">
-        <h2 className="font-syne text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-[1.08] tracking-tight text-white mb-14">
+        <h2 className="font-sans text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-[1.08] tracking-tight text-white mb-14">
           Von der Anfrage zur<br />
           <em className="not-italic text-brand-accent">Analyse in 48 Stunden.</em>
         </h2>
@@ -47,19 +47,19 @@ export const Process = () => {
               className="group bg-brand-bg p-10 relative overflow-hidden transition-all duration-500 hover:bg-brand-bg-card"
             >
               {/* Oversized Background Number */}
-              <div className="absolute -top-4 -right-4 font-syne text-[120px] font-black leading-none text-white/[0.03] transition-all duration-700 group-hover:text-brand-accent/[0.08] group-hover:scale-110 pointer-events-none select-none">
+              <div className="absolute -top-4 -right-4 font-sans text-[120px] font-black leading-none text-white/[0.03] transition-all duration-700 group-hover:text-brand-accent/[0.08] group-hover:scale-110 pointer-events-none select-none">
                 {step.num}
               </div>
 
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="h-px w-8 bg-brand-accent/40 group-hover:w-12 transition-all duration-500" />
-                  <span className="font-syne text-[10px] font-bold tracking-[0.2em] uppercase text-brand-accent">
+                  <span className="font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-brand-accent">
                     Schritt {step.num}
                   </span>
                 </div>
                 
-                <h3 className="font-syne text-lg font-extrabold text-white mb-4 tracking-tight group-hover:text-brand-accent transition-colors duration-300">
+                <h3 className="font-sans text-lg font-extrabold text-white mb-4 tracking-tight group-hover:text-brand-accent transition-colors duration-300">
                   {step.title}
                 </h3>
                 

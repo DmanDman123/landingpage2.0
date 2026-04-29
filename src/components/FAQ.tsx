@@ -18,7 +18,7 @@ export const FAQ = () => {
   return (
     <section className="bg-brand-bg-mid px-6 md:px-12 py-32 border-t border-brand-border">
       <div className="max-w-[780px] mx-auto">
-        <h2 className="font-syne text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-[1.08] tracking-tight text-white mb-12">
+        <h2 className="font-sans text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-[1.08] tracking-tight text-white mb-12">
           Alles, was du wissen<br />
           <em className="not-italic text-brand-accent">möchtest.</em>
         </h2>
@@ -27,7 +27,7 @@ export const FAQ = () => {
             <div key={i} className="border-b border-brand-border">
               <button 
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className={`w-full flex items-center justify-between gap-5 py-5.5 bg-transparent border-none cursor-pointer text-left font-syne text-[15px] font-bold tracking-tight transition-colors ${openIndex === i ? 'text-white' : 'text-white/70 hover:text-white'}`}
+                className={`w-full flex items-center justify-between gap-5 py-5.5 bg-transparent border-none cursor-pointer text-left font-sans text-[15px] font-bold tracking-tight transition-colors ${openIndex === i ? 'text-white' : 'text-white/70 hover:text-white'}`}
               >
                 <span>{faq.q}</span>
                 <div className={`w-5.5 h-5.5 shrink-0 text-brand-accent border border-brand-border-strong rounded-full p-0.5 transition-transform duration-300 ${openIndex === i ? 'rotate-180' : ''}`}>

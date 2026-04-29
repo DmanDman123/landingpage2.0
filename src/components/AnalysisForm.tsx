@@ -4,6 +4,7 @@ import { toast } from 'sonner';
 
 export const AnalysisForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [consent, setConsent] = useState(false);
   // Honeypot field - normal users won't see or interact with it
   const [honeypot, setHoneypot] = useState('');
   const [formData, setFormData] = useState({
@@ -89,12 +90,21 @@ export const AnalysisForm = () => {
           website: '',
           message: ''
         });
+        setConsent(false);
       } else {
-        throw new Error('HubSpot submission failed');
+        const errorData = await response.json().catch(() => null);
+        console.error('HubSpot API Error:', errorData);
+        throw new Error(errorData?.message || 'HubSpot submission failed');
       }
     } catch (error) {
       console.error('Error submitting to HubSpot:', error);
-      toast.error('Fehler beim Senden. Bitte versuche es später erneut oder kontaktiere uns direkt.');
+      const isNetworkError = error instanceof TypeError && error.message === 'Failed to fetch';
+      
+      if (isNetworkError) {
+        toast.error('Verbindungsfehler: Möglicherweise blockiert ein Adblocker oder Tracking-Schutz das Formular. Bitte deaktiviere diesen für unsere Seite oder schreibe uns eine E-Mail an info@dieberater.de', { duration: 8000 });
+      } else {
+        toast.error(error instanceof Error ? `Fehler beim Senden: ${error.message}` : 'Fehler beim Senden. Bitte versuche es später erneut oder kontaktiere uns direkt an info@dieberater.de', { duration: 6000 });
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -103,7 +113,7 @@ export const AnalysisForm = () => {
   return (
     <section className="bg-brand-bg px-6 md:px-12 py-32 border-t border-brand-border" id="analyse">
       <div className="max-w-[700px] mx-auto text-center">
-        <h2 className="font-syne text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-[1.08] tracking-tight text-white mb-3.5">
+        <h2 className="font-sans text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-[1.08] tracking-tight text-white mb-3.5">
           Deine kostenlose<br />
           <em className="not-italic text-brand-accent">Konto-Analyse.</em>
         </h2>
@@ -117,7 +127,7 @@ export const AnalysisForm = () => {
           <div className="flex items-start gap-3 bg-brand-accent-dim border border-brand-border-strong p-3.5 md:p-4.5 mb-8 text-xs md:text-[13px] text-white/70 font-normal leading-relaxed">
             <Star className="w-4.5 h-4.5 text-brand-accent shrink-0 mt-0.25 fill-brand-accent" />
             <div>
-              <strong className="text-brand-accent font-semibold">Unser Versprechen:</strong> Kein Verkaufsdruck, keine Folgeanrufe, kein Spam. Nur ehrliches, persönliches Feedback zu deinem Konto — immer.
+              <strong className="text-brand-accent font-semibold">Unser Versprechen:</strong> Kein Verkaufsdruck, keine Folgeanrufe, kein Spam. Nur ehrliches, persönliches Feedback zu deinem Konto.
             </div>
           </div>
 
@@ -144,7 +154,7 @@ export const AnalysisForm = () => {
                   value={formData.firstname}
                   onChange={handleChange}
                   placeholder="Max" 
-                  className="bg-white/4 border border-brand-border text-white font-instrument text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
+                  className="bg-white/4 border border-brand-border text-white font-sans text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
                 />
               </div>
               <div className="flex flex-col gap-1.5">
@@ -156,7 +166,7 @@ export const AnalysisForm = () => {
                   value={formData.lastname}
                   onChange={handleChange}
                   placeholder="Mustermann" 
-                  className="bg-white/4 border border-brand-border text-white font-instrument text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
+                  className="bg-white/4 border border-brand-border text-white font-sans text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
                 />
               </div>
             </div>
@@ -169,7 +179,7 @@ export const AnalysisForm = () => {
                 value={formData.company}
                 onChange={handleChange}
                 placeholder="Mein Online Shop GmbH" 
-                className="bg-white/4 border border-brand-border text-white font-instrument text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
+                className="bg-white/4 border border-brand-border text-white font-sans text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
               />
             </div>
 
@@ -183,7 +193,7 @@ export const AnalysisForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="max@meinshop.de" 
-                  className="bg-white/4 border border-brand-border text-white font-instrument text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
+                  className="bg-white/4 border border-brand-border text-white font-sans text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
                 />
               </div>
               <div className="flex flex-col gap-1.5">
@@ -194,7 +204,7 @@ export const AnalysisForm = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="+49 123 456789" 
-                  className="bg-white/4 border border-brand-border text-white font-instrument text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
+                  className="bg-white/4 border border-brand-border text-white font-sans text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
                 />
               </div>
             </div>
@@ -207,7 +217,7 @@ export const AnalysisForm = () => {
                 value={formData.google_ads_id}
                 onChange={handleChange}
                 placeholder="123-456-7890" 
-                className="bg-white/4 border border-brand-border text-white font-instrument text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
+                className="bg-white/4 border border-brand-border text-white font-sans text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
               />
               <p className="text-[10px] text-brand-grey/60 mt-0.5 italic">Für ein Audit benötigen wir später lesenden Zugriff.</p>
             </div>
@@ -219,7 +229,7 @@ export const AnalysisForm = () => {
                 name="budget"
                 value={formData.budget}
                 onChange={handleChange}
-                className="bg-white/4 border border-brand-border text-white font-instrument text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3 appearance-none"
+                className="bg-white/4 border border-brand-border text-white font-sans text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3 appearance-none"
               >
                 <option value="" disabled>Bitte wählen …</option>
                 <option value="5000-15000">5.000 – 15.000 €</option>
@@ -237,7 +247,7 @@ export const AnalysisForm = () => {
                 value={formData.website}
                 onChange={handleChange}
                 placeholder="meinshop.de" 
-                className="bg-white/4 border border-brand-border text-white font-instrument text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
+                className="bg-white/4 border border-brand-border text-white font-sans text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
               />
             </div>
 
@@ -249,14 +259,28 @@ export const AnalysisForm = () => {
                 onChange={handleChange}
                 placeholder="Gibt es etwas Besonderes, auf das wir achten sollen?" 
                 rows={3}
-                className="bg-white/4 border border-brand-border text-white font-instrument text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3 resize-y min-h-[100px] max-h-[300px]"
+                className="bg-white/4 border border-brand-border text-white font-sans text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3 resize-y min-h-[100px] max-h-[300px]"
               />
+            </div>
+
+            <div className="flex items-start gap-3 mt-2">
+              <input
+                type="checkbox"
+                id="datenschutz"
+                required
+                checked={consent}
+                onChange={(e) => setConsent(e.target.checked)}
+                className="mt-1 w-4 h-4 accent-brand-accent cursor-pointer shrink-0"
+              />
+              <label htmlFor="datenschutz" className="text-xs text-brand-grey leading-relaxed select-none cursor-pointer">
+                Ich habe die <a href="https://dieberater.de/datenschutz/" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:underline">Datenschutzerklärung</a> zur Kenntnis genommen und stimme der Verarbeitung meiner Daten zur Kontaktaufnahme zu. *
+              </label>
             </div>
 
             <button 
               type="submit" 
               disabled={isSubmitting}
-              className="w-full bg-brand-button text-brand-bg font-instrument text-base font-bold px-8 py-5 border-none cursor-pointer mt-2.5 transition-all hover:bg-brand-button-hover hover:-translate-y-0.5 hover:shadow-[0_12px_36px_rgba(255,174,114,0.3)] active:translate-y-0 flex items-center justify-center gap-2 tracking-wide disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full bg-brand-button text-brand-bg font-sans text-base font-bold px-8 py-5 border-none cursor-pointer mt-2.5 transition-all hover:bg-brand-button-hover hover:-translate-y-0.5 hover:shadow-[0_12px_36px_rgba(255,174,114,0.3)] active:translate-y-0 flex items-center justify-center gap-2 tracking-wide disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <>
