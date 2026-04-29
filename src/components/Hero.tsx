@@ -206,7 +206,7 @@ export const Hero = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8 }}
-          className="absolute z-20 bg-brand-bg-card/90 backdrop-blur-md border border-brand-accent/20 p-5 bottom-[22%] right-[10%] shadow-2xl"
+          className="absolute z-20 bg-brand-bg-card/90 backdrop-blur-md border border-brand-accent/20 p-4 md:p-5 bottom-[14%] right-[2%] md:bottom-[22%] md:right-[10%] shadow-2xl"
         >
           <div className="font-syne text-3xl font-extrabold text-brand-accent leading-none mb-1 tracking-tighter">4.9★</div>
           <div className="text-[10px] text-brand-grey font-bold uppercase tracking-widest">Top Rating</div>
