@@ -15,10 +15,10 @@ export const Footer = () => {
         </div>
       </div>
       <div className="flex gap-7 items-center justify-center flex-wrap">
-        <a href="https://dieberater.de/impressum/" className="text-xs text-white/20 no-underline transition-colors hover:text-brand-accent tracking-wider font-medium">
+        <a href="https://dieberater.de/impressum/" target="_blank" rel="noopener noreferrer" className="text-xs text-white/20 no-underline transition-colors hover:text-brand-accent tracking-wider font-medium">
           Impressum
         </a>
-        <a href="https://dieberater.de/datenschutz/" className="text-xs text-white/20 no-underline transition-colors hover:text-brand-accent tracking-wider font-medium">
+        <a href="https://dieberater.de/datenschutz/" target="_blank" rel="noopener noreferrer" className="text-xs text-white/20 no-underline transition-colors hover:text-brand-accent tracking-wider font-medium">
           Datenschutz
         </a>
         <a href="tel:+4935187446264" className="text-xs text-white/20 no-underline transition-colors hover:text-brand-accent tracking-wider font-medium">
