@@ -232,11 +232,11 @@ export const AnalysisForm = () => {
               <label className="text-[10px] font-bold tracking-widest uppercase text-brand-accent/45">URL deines Online Shops *</label>
               <input 
                 required
-                type="url" 
+                type="text" 
                 name="website"
                 value={formData.website}
                 onChange={handleChange}
-                placeholder="https://meinshop.de" 
+                placeholder="meinshop.de" 
                 className="bg-white/4 border border-brand-border text-white font-instrument text-[15px] px-4 py-3.5 outline-none transition-all focus:border-brand-accent focus:bg-brand-accent/3"
               />
             </div>
